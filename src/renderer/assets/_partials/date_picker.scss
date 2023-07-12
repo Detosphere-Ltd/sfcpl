@@ -1,0 +1,64 @@
+.daterangepicker{
+	@extend .background;
+	@extend .bordered;
+	@extend .rounded;
+	@extend .raised;
+
+
+	.calendar-table{
+		@extend .background;
+		@extend .bordered;
+		@extend .rounded;
+	}
+	td,th{
+		background-color : transparent !important;
+	}
+	th.prev, th.next{
+		@extend .uk-text-white;
+		background-color: rgba($darkTheme, 0.2) !important;
+		@extend .tiny-margin;
+
+		&:hover{
+			@extend .uk-text-white;
+			background-color: rgba($darkTheme, 0.2) !important;
+		}
+		span{
+			border-color : $white !important;
+		}
+	}
+	td.off{
+		@extend .background;
+	}
+	td.in-range{
+		@extend .uk-background-success;
+		@extend .uk-text-white;
+	}
+
+	select,input {
+		width: calc(50% - 1rem) !important;
+	}
+}
+
+.daterangepicker td.off, .daterangepicker td.off.end-date, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date{
+
+}
+
+.reportrange-text{
+	background : transparent !important;
+	padding : 0 !important;
+	border : none !important;
+}
+
+.daterangepicker .ranges li:hover {
+	@extend .uk-background-success-op;
+}
+
+.daterangepicker.show-ranges .drp-calendar.left{
+	border-color : $border-color !important;
+}
+
+.uk-light{
+	.daterangepicker.show-ranges .drp-calendar.left{
+		border-color : $inverse-global-border !important;
+	}
+}

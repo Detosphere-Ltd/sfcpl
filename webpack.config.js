@@ -1,0 +1,1 @@
+{ test: /\.node$/, loader: 'node-loader' }

@@ -1,0 +1,88 @@
+.pos-product{
+	max-width: 280px;
+}
+
+.receipt{
+	box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+	width: 85mm;
+
+
+	.container{
+		max-height: 650px;
+		overflow-y: scroll;
+		.store-logo{
+			width: 60px;
+			height: 60px;
+			background-color:blue;
+			margin: 0 auto;
+		}
+		.store-details{
+			margin-top: 5px;
+			text-align: center;
+			h5{ margin-bottom: 0px;}
+			.branch{ margin-top: 4px; margin-bottom: 4px;}
+			.contact { margin-top: 0px; margin-bottom: 4px; }
+		}
+		.sale-items{
+			border-top : 1px solid #616870;
+
+			table {
+				width: 100%;
+				.row{
+					display: table;
+					width: 100%;
+
+					.column{
+						display: table-cell;
+						padding:2mm;
+					}
+					.item{
+						width: 50%;
+					}
+
+					.qty{
+						width: 20%;
+					}
+					.amount{
+						width: 30%;
+					}
+				}
+
+				small,span{
+					display: block;
+				}
+
+				span{
+					font-size: 12px;
+				}
+
+				.table-border-bottom{
+					border-bottom : 1px dashed #616870;
+				}
+
+				tr.heading{
+					padding-bottom : 5px !important;
+				}
+			}
+		}
+		.final-details{
+			border-top : 1px solid #616870;
+			padding:2mm;
+			.wrapper{
+				width: 80%;
+				margin-left: auto;
+				.det{
+					text-align: right;
+					.price{
+						font-weight: bold;
+						font-size: 20px;
+					}
+				}
+			}
+			p{
+				text-align: center;
+				margin : 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+button,.uk-button{
+	@extend .uk-border-rounded;
+	@extend .text-small;
+	@extend .medium-font;
+	font-size: 14px;
+	*:not(small){
+		@extend .medium-font;
+		font-size: 14px;
+	}
+}
+.uk-button-view{
+	background-color : rgba(lighten($primary, 20%), 0.2) !important;
+}
+
+.uk-button-pinkey{
+	background-color : $pinkey !important;
+}
+
+.uk-button-amber{
+	background-color : darken($amber, 25%) !important;
+}
+.uk-button-success{
+	background-color : darken($success, 5%) !important;
+}
+
+.uk-button-danger{
+	color: rgba($white, 0.88);
+}
+
+.uk-button-small{
+	font-size: 12px;
+}
+
+.uk-button-extra-small{
+	padding: 4px 8px;
+}
+
+button:disabled,
+button[disabled],.uk-button:disabled{
+	background-color: #cccccc !important;
+	color: #666666 !important;
+	&:hover{
+		background-color: #cccccc;
+		cursor: not-allowed;
+	}
+}
+
+
+
+.uk-button-outline-primary{
+	border : 1px solid $primary !important;
+	background-color: transparent;
+	// color :  $primary !important;
+
+	&:hover,&:focus,&:focus-visible{
+		background-color: $primary;
+		color :  $white !important;
+	}
+
+}
+
+.uk-dark{
+	.uk-button-view{
+		color: rgba($white, 0.8);
+	}
+}
+
+.uk-light{
+	.uk-button-primary{
+		color: $white !important;
+	}
+}

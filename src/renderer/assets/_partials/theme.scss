@@ -1,0 +1,157 @@
+.uk-dark{
+	.background{
+		background-color: $darkTheme !important;
+	}
+
+	.uk-list-bullet > ::before{
+		background-color: darken($grey, 10%) !important;
+		@extend .square-20;
+		@extend .uk-border-circle;
+
+	}
+	.app,.content,.content-bg{
+		@extend .background;
+	}
+	h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6,p,span,div,ul,li{
+		color: rgba($white, 0.7) !important;
+	}
+
+	form{
+		span,small {
+			color: $color !important;
+		}
+		input {
+			color: $white !important;
+		}
+	}
+
+	input {
+		color: $white !important;
+	}
+	.uk-text-danger{
+		color: $danger !important;
+	}
+	.uk-text-white{
+		color : $white !important;
+		*{color: $white !important;}
+	}
+	.uk-text-success{
+		color : $success !important;
+	}
+
+	.stripped-bottom > * {
+		border-bottom: 1px solid $border-color;
+		&:last-of-type{
+			border-bottom: none;
+		}
+	}
+
+	.apexcharts-text{
+		fill: $white;
+	}
+}
+
+
+
+.uk-light{
+	.background{
+		background-color: $lightTheme !important;
+	}
+	.uk-list-bullet > ::before{
+		background-color: darken($grey, 30%) !important;
+		@extend .square-20;
+		@extend .uk-border-circle;
+
+	}
+	.app,.content,.content-bg{
+		@extend .background;
+	}
+
+	*{
+		&:not(button){
+			color: $color !important;
+		}
+		
+	}
+	.uk-text-danger{
+		color: $danger !important;
+	}
+	
+	.color{
+		color: $color;
+	}
+
+	.uk-button-danger{
+		color: $white !important;
+	}
+
+	.bordered{
+		border: 1px solid $inverse-global-border !important;
+	}
+	.dashed{
+		border: 1px dashed darken($inverse-global-border, 10%) !important;
+	}
+	.bordered-y{
+		border-top: 1px solid $inverse-global-border;
+		border-bottom : 1px solid $inverse-global-border;
+	}
+
+	.border-bottom{
+		border-bottom : 1px solid $inverse-global-border;
+	}
+	.border-top{
+		border-top : 1px solid $inverse-global-border;
+	}
+
+	.border-right{
+		border-right : 1px solid $inverse-global-border;
+	}
+	.border-left{
+		border-left : 1px solid $inverse-global-border;
+	}
+
+	.stripped-bottom > * {
+		border-bottom: 1px solid $inverse-global-border;
+		&:last-of-type{
+			border-bottom: none;
+		}
+	}
+	.uk-text-white{
+		color : $white !important;
+		*{color: $white !important;}
+	}
+
+	.uk-text-warning{
+		color : $warning !important;
+	}
+	.uk-text-success{
+		color : $success !important;
+	}
+
+	.link{
+		&:hover{
+			color : darken($primary, 15%) !important;
+			*{
+				color : darken($primary, 15%) !important;
+			}
+		}
+	}
+
+	.transfer-status{
+		&::before{
+			background-color: $inverse-global-border; 
+		}
+	}
+
+	.uk-button-outline-primary{
+		border : 1px solid $primary !important;
+		background-color: transparent;
+		color :  darken($primary, 15%) !important;
+
+		&:hover,&:focus,&:focus-visible{
+			background-color: $primary;
+			color :  $white !important;
+		}
+
+	}
+}

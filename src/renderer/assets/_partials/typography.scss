@@ -1,0 +1,125 @@
+@font-face {
+	font-family: 'Black';
+	src : url('~/assets/fonts/Black.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Bold';
+	src : url('~/assets/fonts/Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Medium';
+	src : url('~/assets/fonts/Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Regular';
+	src : url('~/assets/fonts/Regular.woff2') format('woff2');
+}
+
+
+*{
+	font-family: 'Regular', sans-serif;
+	font-weight: 400;
+}
+
+h1,h2,h3,h4,h6,.display-font{
+	font-family: 'Bold', sans-serif;
+	font-weight: 700;
+}
+
+.font-weight-bold, .uk-text-bold{
+	font-family: 'Bold', sans-serif;
+	font-weight: 600;
+}
+.medium-font{
+	font-family: 'Medium', sans-serif;
+	font-weight: 500;
+}
+
+
+.uk-text-meta{
+	font-size: 14px;
+	color : $color;
+}
+
+.uk-text-white{
+	color : $white !important;
+}
+
+.text-small{
+	font-size: 12.9px;
+}
+
+.highlight-text{
+	color : darken($grey, 15%) !important;
+}
+
+.fz-emphasiz{
+	font-size: 28px;
+}
+.fz-large{
+	font-size: 17px;
+}
+
+
+.uk-light{
+	.uk-text-warning{
+		color : $warning !important;
+	}
+	.uk-text-primary{
+		color : $primary !important;
+	}
+}
+
+
+.uk-dark{
+	.uk-text-warning{
+		color : $warning !important;
+	}
+	.uk-text-primary{
+		color : lighten($primary, 15%) !important;
+	}
+}
+
+/*
+Media queries for devices larger than regular laptops eg: TV
+*/
+@media only screen and (min-device-width : 1904px){
+
+}
+
+/*
+Media Queries for Large screen laptops and Desktop Devices 
+*/
+@media only screen and (min-device-width : 1264px) and (max-device-width : 1904px) {
+
+}
+
+/*
+Media Queries for small screen laptops and large tablet devices
+*/
+@media only screen and (min-device-width : 960px) and (max-device-width : 1264px) {
+
+}
+
+/*
+Media queries for handheld tablet devices
+*/
+@media only screen and (min-device-width : 600px) and (max-device-width :  960px) {
+
+}
+
+/*Media Queries for Mobile Devices*/
+@media only screen and (max-device-width : 600px) {
+	.uk-heading-large {
+		font-size: 40px;
+	}
+	.uk-heading-medium {
+		font-size: 30px;
+	}
+	.uk-heading-small {
+		font-size: 20px;
+	}
+
+}

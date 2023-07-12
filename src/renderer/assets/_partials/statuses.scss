@@ -1,0 +1,117 @@
+$created :#f8ecc2; //#DAE0B6;
+$processing : #88B724;
+$disapproved : #c75817;
+$dispatched : #3C83ED;
+$confirmed : #1DB954;
+$cancelled : $danger;
+$issue : #E35528;
+$resolved : #FF932F;
+
+.status{
+	padding: 3px 9px;
+	font-size: 12px;
+	border-radius: 4px;
+	// @extend .uk-text-white;
+	@extend .text-small;
+	@extend .uk-text-capitalize;
+}
+.status.created , .status.submitted{
+	// color: $color !important;
+}
+.transparent{
+	background : transparent !important;
+}
+.processing{
+	background-color :rgba( $processing, 0.3) !important;
+	border : 1px solid  $processing;
+}
+
+.accepted{
+	background-color :rgba( $primary, 0.3) !important;
+	border : 1px solid  $primary;
+}
+
+.submitted{
+	background-color :rgba( $created, 0.3) !important;
+	border : 1px solid  $created;
+}
+.created {
+	background-color :rgba( $created, 0.3) !important;
+	border : 1px solid  $created;
+}
+
+.dispatched{
+	background-color :rgba( $dispatched, 0.3) !important;
+	border : 1px solid  $dispatched;
+}
+
+.raised_issue{
+	background-color :rgba( $issue, 0.3) !important;
+	border : 1px solid  $issue;
+}
+.resolved{
+	background-color :rgba( $resolved, 0.3) !important;
+	border : 1px solid  $resolved;
+}
+
+.cancelled{
+	background-color :rgba( $cancelled, 0.3) !important;
+	border : 1px solid  $cancelled;
+}
+.confirmed, .success{
+	background-color :rgba( $confirmed, 0.3) !important;
+	border : 1px solid  $confirmed;
+}
+.disapproved, .rejected{
+	background-color :rgba( $disapproved, 0.3) !important;
+	border : 1px solid  $disapproved;
+}
+
+.label-success, .safe{
+	border : 1px solid rgba($success, 0.5);
+	background-color: rgba($success, 0.2);
+	color: $success !important;
+	*,span{
+		color: $success !important;
+	}
+}
+
+
+.label-danger, .danger{
+	border : 1px solid rgba($danger, 0.5);
+	background-color: rgba($danger, 0.2);
+	color: $danger !important;
+	*,span{
+		color: $danger !important;
+	}
+}
+
+.label-primary{
+	border : 1px solid rgba($primary, 0.5);
+	background-color: rgba($primary, 0.2);
+	color: $primary !important;
+	*,span{
+		color: rgba($white, 0.5) !important;
+	}
+}
+
+.label-pinkey{
+	border : 1px solid rgba($pinkey, 0.5);
+	background-color: rgba($pinkey, 0.2);
+	color: $pinkey !important;
+	*,span{
+		color: rgba($white, 0.5) !important;
+	}
+}
+
+.unknown{
+	@extend .uk-button-view;
+}
+
+.warning{
+	@extend .uk-background-warning;
+	color: $white !important;
+	*,span{
+		color: $white !important;
+	}
+}

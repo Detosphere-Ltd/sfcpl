@@ -1,0 +1,197 @@
+.spin{
+  animation: spinAround 500ms infinite linear;
+}
+.beat{
+ animation: heartbeat 1000ms infinite;
+}
+
+.loading:after {
+  animation: spinAround 500ms infinite linear;
+  border: 3px solid #fff;
+  border-radius: 86px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  position: absolute;
+  left: calc(50% - (1em / 2));
+  top: calc(50% - (1em / 2));
+  position: absolute !important;
+}
+
+.loading{
+ color: transparent !important;
+ span{
+  color: transparent !important;
+}
+}
+
+.line {
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: $global-primary-background;
+}
+
+.load-2 .line:nth-last-child(1) {
+  animation: loadingB 1.5s 1s infinite;
+}
+.load-2 .line:nth-last-child(2) {
+  animation: loadingB 1.5s 0.5s infinite;
+}
+.load-2 .line:nth-last-child(3) {
+  animation: loadingB 1.5s 0s infinite;
+}
+
+@keyframes loadingB {
+  0 {
+    width: 15px;
+  }
+  50% {
+    width: 35px;
+  }
+  100% {
+    width: 15px;
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(359deg)
+  }
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+.shimer{
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, lighten($darkGrey, 5%) 20%, $darkGrey 90%);
+  background-size: 1000px 640px;
+
+  position: relative;
+}
+
+.loadingShimmer{
+ animation-duration: 2s;
+ animation-fill-mode: forwards;
+ animation-iteration-count: infinite;
+ animation-name: placeHolderShimmer;
+ animation-timing-function: linear;
+ background-color: lighten(#242626, 80%);
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+    background-position: -468px 0
+  }
+  100%{
+    background-position: 468px 0
+  }
+}
+
+
+button, .uk-button{
+  position: relative;
+}
+
+
+
+uk-button:disabled,.uk-button-default:disabled, .uk-button-primary:disabled, .uk-button-secondary:disabled, .uk-button-danger:disabled {
+  background-color : lighten($dark, 45%) !important;
+  cursor: not-allowed !important;
+}
+
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  // height: 80px;
+  bottom: 12px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  // top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

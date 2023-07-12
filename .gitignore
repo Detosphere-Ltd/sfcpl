@@ -1,0 +1,14 @@
+.nuxt
+yarn.lock
+yarn-error.log
+dist
+build/*
+!build/icons
+!build/entitlements.mac.plist
+node_modules
+.env
+.env*
+.DS_Store.
+*/.DS_Store.
+yarn.lock
+src/renderer/.nuxt

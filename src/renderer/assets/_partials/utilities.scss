@@ -1,0 +1,358 @@
+@mixin contained {
+	width: 100vw;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+@mixin raised {
+	box-shadow: 0px 4px 8px #0a164626;
+}
+.page-top{
+	margin-top: 50px;
+}
+.blur{
+	backdrop-filter: blur(4px);
+}
+.z-index-999{
+	z-index: 999 !important;
+}
+
+.underlined{
+	text-decoration: underline !important;
+}
+.link{
+	&:hover{
+		@extend .underlined;
+		color : $success !important;
+		*{
+			color : $success !important;
+		}
+	}
+}
+
+.click{
+	cursor: pointer;
+}
+.rounded{
+	border-radius: 4px;
+}
+
+.rounded-lg {
+	border-radius: 25px;
+}
+
+.rounded-top{
+	border-top-left-radius: 4px; 
+	border-top-right-radius: 4px; 
+}
+.rounded-bottom{
+	border-bottom-left-radius: 4px; 
+	border-bottom-right-radius: 4px; 
+}
+
+.rounded-left{
+	border-top-left-radius: 4px !important; 
+	border-bottom-left-radius: 4px !important; 
+}
+
+.rounded-right{
+	border-top-right-radius: 4px !important; 
+	border-bottom-right-radius: 4px !important; 
+}
+
+.pill{
+	border-radius: 25px !important;
+}
+
+.no-radius{
+	border-radius : 0px !important;
+}
+
+
+.bordered{
+	border: 1px solid $border-color !important;
+}
+.dashed{
+	border: 1px dashed darken($border-color, 10%) !important;
+}
+.bordered-y{
+	border-top: 1px solid $border-color;
+	border-bottom : 1px solid $border-color;
+}
+
+.border-bottom{
+	border-bottom : 1px solid $border-color;
+}
+.border-top{
+	border-top : 1px solid $border-color;
+}
+
+.border-dashed-top{
+	border-top : 1px dashed $border-color;
+}
+
+.border-dotted-top{
+	border-top : 1px dotted $border-color;
+}
+
+.border-right{
+	border-right : 1px solid $border-color;
+}
+
+.border-left{
+	border-left : 1px solid $border-color;
+}
+
+.bordered-white{
+	border: 1px solid $white !important;
+}
+
+.border-color{
+	border-color : $border-color !important;
+}
+
+
+.no-border{
+	border : none !important;
+}
+
+.raised{
+	@include raised;
+}
+
+.raised-deep{
+	box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12), 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.raised-on-hover{
+	&:hover, &:focus, &:focus-within{
+		@include raised;
+		border : none !important;
+	}
+}
+
+
+.raised-deep-on-hover{
+	&:hover, &:focus, &:focus-within{
+		@extend .raised-deep;
+		border : none !important;
+	}
+}
+// backgrounds
+
+.uk-background-white{
+	background-color: $white !important;
+}
+
+.uk-background-pinkey{
+	background-color: $pinkey !important;
+}
+
+.uk-background-grey{
+	background-color: $grey !important;
+}
+
+.uk-background-danger{
+	background-color: lighten($danger, 5%) !important;
+}
+
+.uk-background-primary-dark{
+	background-color: darken($primary, 20% ) !important;
+}
+.uk-background-danger-op{
+	background-color: #fef6f9 !important;
+}
+
+.uk-background-primary-op{
+	background-color: rgba($primary, 0.2) !important;
+}
+.uk-background-danger-op{
+	background-color: rgba($danger, 0.2) !important;
+}
+
+.uk-background-success-op{
+	background-color: rgba($success, 0.2) !important;
+}
+
+.uk-background-pinkey-op{
+	background-color: rgba($pinkey, 0.2) !important;
+}
+
+.uk-background-primary-lite{
+	background-color: #acccca4d !important;
+}
+
+.uk-background-muted-dark{
+	background-color: darken($grey, 5%) !important;
+}
+
+.uk-background-warning{
+	background-color: $warning !important;
+}
+
+.uk-background-warning-op{
+	background-color: rgba($warning, 0.2) !important;
+}
+
+.scrim{
+	background: linear-gradient(180deg,#00000061 0,#00000061 3.5%,rgba(0,0,0,.379) 7%,rgba(0,0,0,.377) 10.35%,rgba(0,0,0,.375) 13.85%,rgba(0,0,0,.372) 17.35%,rgba(0,0,0,.369) 20.85%,rgba(0,0,0,.366) 24.35%,rgba(0,0,0,.364) 27.85%,rgba(0,0,0,.361) 31.35%,rgba(0,0,0,.358) 34.85%,rgba(0,0,0,.355) 38.35%,rgba(0,0,0,.353) 41.85%,rgba(0,0,0,.351) 45.35%,#00000059 48.85%,rgba(0,0,0,.353) 52.35%,#0000005c 55.85%,rgba(0,0,0,.371) 59.35%,rgba(0,0,0,.385) 62.85%,rgba(0,0,0,.402) 66.35%,#0000006b 69.85%,#00000070 73.35%,#00000075 76.85%,#0000007a 80.35%,rgba(0,0,0,.498) 83.85%,rgba(0,0,0,.515) 87.35%,rgba(0,0,0,.529) 90.85%,#0000008a 94.35%,rgba(0,0,0,.547) 97.85%,#0000008c);
+}
+
+.uk-background-success{
+	background-color: $success !important;
+}
+
+.danger-on-hover{
+	&:hover{
+		background-color : rgba($danger, 0.3);
+	}
+}
+
+.success-on-hover{
+	&:hover{
+		background-color : rgba($success, 0.3);
+	}
+}
+
+.primary-on-hover{
+	&:hover{
+		background-color : rgba($primary, 0.05);
+	}
+}
+
+
+
+// Margins
+.tiny-margin-right{
+	margin-right: 4px;
+}
+.tiny-margin-left{
+	margin-left: 4px;
+}
+
+.tiny-margin-bottom{
+	margin-bottom: 4px;
+}
+.tiny-margin-top{
+	margin-top: 4px;
+}
+
+.tiny-margin{
+	margin: 4px;;
+}
+
+
+
+
+// Paddings
+
+.grid-padding{
+	padding: 6px;
+}
+
+.tiny-padding{
+	padding: 10px;
+}
+
+
+// 
+
+.chip{
+	display: flex;
+	padding: 4px 10px;
+}
+
+// Squares
+
+
+@mixin createSquare($dimension){
+	width: $dimension;
+	height: $dimension;
+}
+
+$ceil : 500;
+$floor : 5;
+
+@for $i from $floor through $ceil{
+	@if $i % 5 == 0 {
+		.square-#{$i} {
+			@include createSquare(#{$i+"px"})
+		}
+	}
+}
+
+
+.uk-width-x-small{
+	// width: 100%;
+	width: 75px;
+}
+.uk-width-small{
+	min-width: 150px;
+}
+
+.uk-width-medium{
+	min-width: 300px;
+}
+
+.uk-width-max-large{
+	width: 100%;
+	max-width: 350px;
+}
+
+.center{
+	@extend .uk-flex;
+	@extend .uk-flex-column;
+	@extend .uk-flex-center;
+	@extend .uk-flex-middle;
+}
+
+
+
+
+/*
+Media queries for devices larger than regular laptops eg: TV
+*/
+@media only screen and (min-device-width : 1904px){
+
+}
+
+/*
+Media Queries for Large screen laptops and Desktop Devices 
+*/
+@media only screen and (min-device-width : 1264px) and (max-device-width : 1904px) {
+
+}
+
+/*
+Media Queries for small screen laptops and large tablet devices
+*/
+@media only screen and (min-device-width : 960px) and (max-device-width : 1264px) {
+
+}
+
+/*
+Media queries for handheld tablet devices
+*/
+@media only screen and (min-device-width : 600px) and (max-device-width :  960px) {
+
+}
+
+/*Media Queries for Mobile Devices*/
+@media only screen and (max-device-width : 600px) {
+	.padding-remove-sm{
+		padding: 0 !important;
+	}
+
+	.padding-remove-x-sm {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.padding-remove-y-sm {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+	.padding-sm-small{
+		padding : 10px !important;
+	}
+}

@@ -1,0 +1,248 @@
+@mixin input {
+	width: 100% !important;
+	@extend .uk-border-rounded;
+	font-size: 14px;
+	background-color: transparent;
+	&:focus{
+		@extend .uk-border-rounded;
+	}
+	&:focus-visible{
+		background-color: lighten($secondary, 3%);
+	}
+
+	&::placeholder { 
+		color: $color;
+		opacity: 1;
+	}
+	&:disabled{
+		@extend .background;
+	}
+}
+
+.has-error{
+	border-color: rgba($danger, 0.85) !important;
+	&::placeholder { 
+		color: $danger !important;
+	}
+	color: $danger !important;
+}
+
+
+
+select,.uk-select,input[type=text],input[type=password],input[type=number],input[type=email],.uk-input,.uk-textarea{
+	@include input;
+	@extend .bordered;
+
+	&.has-error{
+		@extend .has-error
+	}
+}
+.uk-radio:checked, .uk-checkbox:checked, .uk-checkbox:indeterminate{
+	background-color : $primary !important;
+}
+
+
+.uk-light{
+	select,.uk-select,input[type=text],input[type=password],input[type=number],input[type=email],.uk-input,.uk-textarea {
+		color : $color !important;
+		background-color: $grey;
+		&:focus{
+			@extend .uk-border-rounded;
+		}
+		&:focus-visible{
+			box-shadow: 0px 0px 5px rgba($primary, 0.2);
+			background-color: $white;
+		}
+
+		&::placeholder { 
+			color: $color;
+			opacity: 1;
+		}
+
+		&.has-error{
+			@extend .has-error
+		}
+	}
+
+
+	
+}
+
+.tags-input{
+	
+	.ant-select{
+		outline: none !important;
+		box-shadow : none !important;
+
+		.ant-select-selection{
+			outline: none !important;
+			box-shadow : none !important;
+			
+
+			.ant-select-selection__choice{
+				padding: 3px 15px !important;
+				background-color: rgba($global-primary-background, 0.2) !important;
+				border: none !important;
+				border-radius: 35px !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				div	{
+					margin-right: 20px;
+					font-size: 0.8rem !important;
+					text-transform: capitalize !important;
+				}
+				span{
+					display: flex !important;
+					flex-direction: column !important;
+					background-color: $danger !important;
+					height: 20px;
+					width: 20px;
+					padding: 3px;
+					margin-left: 5px !important;
+					border-radius: 55%;
+					vertical-align: center !important; 
+				}
+
+				svg{
+					fill: #FFFFFF !important;
+				}
+			}
+		}
+
+		.ant-select-selection, .ant-select-selection--multiple{
+			background-color: transparent !important;
+			@extend .bordered;
+		}
+		.ant-select-selection__placeholder,.ant-select-search__field{
+			font-size: 14px;
+		}
+	}
+
+
+}
+
+.ant-select-dropdown , .ant-select-dropdown--multiple, .ant-select-dropdown-menu{
+	@extend .bordered;
+	padding: 0px !important;
+	background-color: darken($grey, 30%) !important;
+
+	.ant-select-dropdown-menu-item{
+		color: $white !important;
+		background-color: rgba($primary, 0.12) !important;
+		i{
+			display: none !important;
+		}
+	}
+}
+
+
+.ant-select-selection-selected-value{
+	@extend .uk-text-small;
+}
+
+
+
+.ant-input-number{
+	height: auto !important;
+}
+
+.ant-input-number-lg{
+	height: 55px !important;
+	input{
+		height: 55px !important;
+	}
+}
+
+.ant-input-number{
+	background: transparent !important;
+	border: none !important;
+	outline: none !important;
+	.ant-input-number-input-wrap{
+		@extend .background ;
+		border-left : none !important;
+	}
+	.ant-input-number-handler-wrap{
+		display: none !important;
+	}
+	
+
+	width: 100% !important;
+	box-shadow : none !important;
+	
+
+
+	input {
+		@extend .uk-text-small;
+		@extend .uk-input;
+		@extend .uk-input;
+	}
+
+
+
+
+	&:focus{
+		@extend .uk-border-rounded;
+	}
+	&:focus-visible{
+		// outline: 3px solid rgba($primary, 0.2);
+		// box-shadow: 0px 0px 30px rgba($primary, 0.8);
+		background-color: lighten($secondary, 3%);
+	}
+
+	&::placeholder { 
+		color: $color;
+		opacity: 1;
+	}
+
+	&.has-error{
+		input.ant-input-number-input {
+			@extend .has-error
+		}
+		
+	}
+}
+
+.no-border{
+	input {
+		border : none !important;
+	}
+}
+
+.vue-tel-input{
+	border : none !important;
+	&:focus-within,&:hover,&:focus{
+		box-shadow : none !important;
+	}
+	.vti__input{
+		@include input;
+		@extend .uk-input;
+		@extend .uk-form-large;
+	}
+
+	.vti__dropdown{
+		display: none;
+	}
+}
+.vue-tel-input.rounded{
+	@extend .uk-border-rounded;
+	.vti__input{
+		@extend .uk-border-rounded;
+	}
+}
+
+.vue-tel-input.uk-border-rounded{
+	@extend .uk-border-rounded;
+	.vti__input{
+		@extend .uk-border-rounded;
+	}
+}
+
+
+.has-error, .ant-input-number.has-error{
+	border-color: rgba($danger, 0.85) !important;
+	&::placeholder { 
+		color: $danger;
+		opacity: 1;
+	}
+}
